@@ -259,8 +259,6 @@ Item {
 
         //icon: "/usr/share/icons/hicolor/80x80/apps/followmee80.png"
         title: Helper.TITLE
-        //acceptButtonText: "Website"
-        //rejectButtonText: "Close"
 
         onAccepted: Qt.openUrlExternally("https://github.com/talanc/followmee")
 

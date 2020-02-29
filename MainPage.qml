@@ -41,61 +41,6 @@ Page {
             id: buttons
             model: Helper.COLORS
 
-            /*Rectangle {
-                property color mycolor: modelData
-
-                width: gamePage.width / 2 - grid.spacing
-                height: gamePage.height / 2 - grid.spacing
-                color: mycolor
-                border.color: Qt.darker(mycolor, 1.5)
-                radius: 15
-
-                Behavior on color {
-                    ColorAnimation { duration: 100 }
-                }
-
-                Timer {
-                    id: timer
-                    interval: 100
-                    onTriggered: parent.color = parent.mycolor
-                }
-
-                function press(guess) {
-                    color = Qt.darker(mycolor)
-                    timer.start()
-                    if (guess === Game.GUESS_WRONG) {
-                        // feedback undefined in simulator
-                        if (buzz.start) {
-                            buzz.start()
-                        }
-                        wrong.play()
-                    } else {
-                        sound.play()
-                    }
-                }
-
-                SoundEffect {
-                    id: sound
-                    source: Helper.SOUNDS[index]
-                }
-
-                MouseArea {
-                    enabled: gamePage.state === "guess"
-                    anchors.fill: parent
-                    onPressed: {
-                        var guess = Game.makeGuess(index)
-                        press(guess)
-
-                        if (guess === Game.GUESS_WRONG) {
-                            gamePage.gameOver()
-                            return
-                        } else if (guess === Game.GUESS_LEVEL) {
-                            simonSays()
-                        }
-                    }
-                }
-            }*/
-
             Rectangle {
                 property color mycolor: modelData
 
