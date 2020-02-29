@@ -5,7 +5,7 @@ ApplicationWindow {
     id: window
     visible: true
     width: 480
-    height: 800
+    height: 820
     title: qsTr("FollowMee")
 
     MainPage {
