@@ -1,0 +1,22 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>HomeForm.ui.qml</file>
+        <file>Page1Form.ui.qml</file>
+        <file>Page2Form.ui.qml</file>
+        <file>qtquickcontrols2.conf</file>
+        <file>storage.js</file>
+        <file>game.js</file>
+        <file>helper.js</file>
+        <file>SwipeAnimation.qml</file>
+        <file>NameTumbler.qml</file>
+        <file>MainMenu.qml</file>
+        <file>CenterColumn.qml</file>
+        <file>MainPage.qml</file>
+        <file>audio/green.wav</file>
+        <file>audio/blue.wav</file>
+        <file>audio/red.wav</file>
+        <file>audio/wrong.wav</file>
+        <file>audio/yellow.wav</file>
+    </qresource>
+</RCC>
