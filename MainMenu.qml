@@ -1,5 +1,6 @@
 import QtQuick 2.14
 import QtQuick.Controls 2.14
+import QtQuick.Layouts 1.14
 import QtQuick.LocalStorage 2.12
 import "helper.js" as Helper
 import "storage.js" as Storage
@@ -250,14 +251,38 @@ Item {
 
     Dialog {
         id: aboutDialog
+
+        anchors.centerIn: parent
+
+        width: parent.width * 0.8
+        height: parent.height * 0.5
+
         //icon: "/usr/share/icons/hicolor/80x80/apps/followmee80.png"
-        //titleText: Helper.TITLE
-        //message: "© 2014\nLicenced under GPLv2\n\nSource code available on website"
+        title: Helper.TITLE
         //acceptButtonText: "Website"
         //rejectButtonText: "Close"
+
         onAccepted: Qt.openUrlExternally("https://github.com/talanc/followmee")
 
-        standardButtons: Dialog.Ok | Dialog.Cancel
+        Label {
+            text: "© 2014,2020\nLicenced under GPLv2\n\nSource code available on the website."
+        }
+
+        footer: DialogButtonBox {
+
+            Button {
+                text: "Website"
+
+                DialogButtonBox.buttonRole: DialogButtonBox.AcceptRole
+            }
+
+            Button {
+                text: "Close"
+
+                DialogButtonBox.buttonRole: DialogButtonBox.RejectRole
+            }
+        }
+
     }
 
     ToolTip {

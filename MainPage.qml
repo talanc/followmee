@@ -1,14 +1,11 @@
 import QtQuick 2.14
 import QtQuick.Controls 2.14
-//import com.nokia.meego 1.1
 import QtMultimedia 5.14
-//import QtMobility.feedback 1.1
 import "helper.js" as Helper
 import "game.js" as Game
 
 Page {
     id: gamePage
-    //orientationLock: PageOrientation.LockPortrait
 
     function newGame() {
         Game.newGame(Helper.COLORS.length)
@@ -26,6 +23,12 @@ Page {
         }
         state = "simon"
         simon.say(startInterval)
+    }
+
+    // background
+    Rectangle {
+        anchors.fill: parent
+        color: "black"
     }
 
     Grid {
@@ -210,7 +213,6 @@ Page {
 
         onNewGame: {
             gamePage.newGame()
-            //parent.newGame()
         }
     }
 
