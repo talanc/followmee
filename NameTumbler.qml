@@ -2,8 +2,6 @@ import QtQuick 2.14
 import QtQuick.Controls 2.14
 
 Item {
-    property string name: "AAA"
-
     property variant __characters: [ "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
 
     width: 300

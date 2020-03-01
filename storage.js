@@ -1,4 +1,5 @@
 .pragma library
+.import QtQuick.LocalStorage 2.0 as LocalStorage
 
 var __db = null
 
@@ -8,15 +9,10 @@ var __dummyScores = [{ name: "MEE", score: 1 },
 
 var NUM_SCORES = __dummyScores.length
 
-var __openFunc = null
-
-function setFunc(openFunc) {
-    __openFunc = openFunc
-}
-
 function __openDb() {
+
     if (__db === null) {
-        __db = __openFunc("followmee", "1.0", "followmee data", 100)
+        __db = LocalStorage.LocalStorage.openDatabaseSync("followmee", "1.0", "followmee data", 100)
         __db.transaction(__createTables)
     }
 }

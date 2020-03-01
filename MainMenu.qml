@@ -1,7 +1,6 @@
 import QtQuick 2.14
 import QtQuick.Controls 2.14
 import QtQuick.Layouts 1.14
-import QtQuick.LocalStorage 2.12
 import "helper.js" as Helper
 import "storage.js" as Storage
 
@@ -181,7 +180,6 @@ Item {
                 Component.onCompleted: refresh()
 
                 function refresh() {
-                    Storage.setFunc(LocalStorage.openDatabaseSync);
                     model = Storage.getHighScores()
                 }
             }
