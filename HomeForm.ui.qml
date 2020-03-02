@@ -14,5 +14,8 @@ Page {
 
     NameTumbler {
         id: tumbler
+
+        width: 300
+        height: 400
     }
 }

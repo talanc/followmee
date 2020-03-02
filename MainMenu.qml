@@ -154,7 +154,7 @@ Item {
         }
 
         // scores
-        CenterColumn {
+        ColumnLayout {
             anchors {
                 centerIn: parent
                 verticalCenterOffset: -60
@@ -186,7 +186,7 @@ Item {
         }
 
         // buttons
-        CenterColumn {
+        ColumnLayout {
             spacing: 35
 
             anchors {
@@ -196,6 +196,9 @@ Item {
             }
 
             Button {
+                Layout.alignment: Qt.AlignCenter
+                Layout.preferredWidth: 250
+
                 text: qsTr("New Game")
 
                 onClicked: {
@@ -205,6 +208,9 @@ Item {
             }
 
             Button {
+                Layout.alignment: Qt.AlignCenter
+                Layout.preferredWidth: 250
+
                 text: qsTr("About")
 
                 onClicked: aboutDialog.open()
@@ -213,7 +219,7 @@ Item {
     }
 
     // enter high score
-    CenterColumn {
+    ColumnLayout {
         spacing: 50
 
         anchors {
@@ -227,17 +233,24 @@ Item {
         }
 
         Label {
+            Layout.alignment: Qt.AlignCenter
+
             text: Helper.NEW_HIGH_SCORE
             font.pixelSize: 55
         }
 
         NameTumbler {
+            Layout.alignment: Qt.AlignCenter
+
             id: nameTumbler
             width: 300
             height: 350
         }
 
         Button {
+            Layout.alignment: Qt.AlignCenter
+            Layout.preferredWidth: 250
+
             text: qsTr("Submit")
             onClicked: {
                 highScoreIdx = Storage.postHighScore(nameTumbler.getName(), score)
@@ -261,7 +274,7 @@ Item {
         onAccepted: Qt.openUrlExternally("https://github.com/talanc/followmee")
 
         Label {
-            text: "© 2014,2020\nLicenced under GPLv2\n\nSource code available on the website."
+            text: "© 2014,2020\nLicenced under GPLv3\n\nSource code available on the website."
         }
 
         footer: DialogButtonBox {

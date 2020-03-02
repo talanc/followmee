@@ -8,7 +8,6 @@ ApplicationWindow {
     height: 820
     title: qsTr("FollowMee")
 
-    MainPage {
-        anchors.fill: parent
-    }
+    MainPage { anchors.fill: parent }
+    //HomeForm { anchors.fill: parent }
 }
